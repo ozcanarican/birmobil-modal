@@ -1,4 +1,6 @@
 # Installation
+![demo](https://birmobil.com/git-files/modal-countdown.jpg)
+
 In your root folder, run following command
 ```console
 npm install @ozcanarican/modal
@@ -11,13 +13,14 @@ add CSS link in the head tag
 ```
 
 add JS link to footer
+```html
 <body>
     .
     .
     .
     <script src="/node_modules/@ozcanarican/modal/modal.js"></script>
 </body>
-```
+````
 
 # Usage
 ## Adding Modal
