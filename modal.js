@@ -3,7 +3,7 @@ var timeInterval
 var countdown
 var timetext
 
-const addDefaultEvents => {
+const addDefaultEvents = () => {
   Array.from(document.getElementsByClassName("modal-button")).map((b) => {
     b.addEventListener("click", () => {
       let target = b.getAttribute("data-target");
