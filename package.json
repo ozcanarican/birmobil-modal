@@ -1,11 +1,27 @@
 {
-  "name": "birmobil-modal",
-  "version": "1.0.0",
-  "description": "",
+  "name": "@ozcanarican/modal",
+  "version": "1.0.2",
+  "description": "Create reusable modal views",
   "main": "modal.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "publish": "npm publish"
   },
   "author": "Özcan ARICAN",
-  "license": "ISC"
+  "license": "ISC",
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ozcanarican/birmobil-modal.git"
+  },
+  "keywords": [
+    "modal",
+    "view"
+  ],
+  "bugs": {
+    "url": "https://github.com/ozcanarican/birmobil-modal/issues"
+  },
+  "homepage": "https://github.com/ozcanarican/birmobil-modal#readme"
 }
