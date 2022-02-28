@@ -3,10 +3,13 @@ var timeInterval
 var countdown
 var timetext
 
-const addDefaultEvents = () => {
+const addDefaultEvents = (options) => {
   Array.from(document.getElementsByClassName("modal-button")).map((b) => {
-    b.addEventListener("click", () => {
-      let target = b.getAttribute("data-target");
+    var new_element = b.cloneNode(true);
+    b.parentNode.replaceChild(new_element, b);
+
+    new_element.addEventListener("click", () => {
+      let target = new_element.getAttribute("data-target");
       if (target) {
         let modal = document.getElementById(target);
         if (modal) {
@@ -27,6 +30,15 @@ const addDefaultEvents = () => {
                       countdown.setAttribute("data-status","1")
                       countdown.innerHTML = timetext
                       countdown.classList.add("modal-done")
+                      if(options) {
+                        if(options.target == target) {
+                          var cd = countdown.cloneNode(true);
+                          countdown.parentNode.replaceChild(cd, countdown);
+                          cd.addEventListener("click",()=>{
+                            options.callback()
+                          })
+                        }
+                      }
                   }
               },1000)
           }
